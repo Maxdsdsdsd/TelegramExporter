@@ -36,15 +36,6 @@ def is_tdata_in_folder(path : pathlib.Path) -> bool:
 		return True
 	return False
 
-def kill_telegram_process():
-    for proc in psutil.process_iter():
-        if proc.name() == 'Telegram.exe':
-            if(check_process_exist_by_name(name)):
-                Logger.info('Successfully killed Telegram process.')
-            else:
-                Logger.warn('Unsuccessfully killed Telegram process.')
-            return
-
 def kill_telegram_process_windows():
     os.system("taskkill /f /im Telegram.exe > nul")
     Logger.info('Killed Telegram process.')
