@@ -6,8 +6,6 @@
 
 Telegram Exporter - exports Telegram's tdata and logs
 
-![Platform](https://img.shields.io/powershellgallery/p/TelegramExporter?logo=windows)
-
 ## Features
 
 - No required third party modules
