@@ -48,14 +48,7 @@ def save_tdata_in_archive(zip_file, path : pathlib.Path):
 			save_tdata_in_archive(zip_file, file.resolve())
 
 def get_telegram_logs(path : pathlib.Path):
-	logs = []
-
-	for file in path.iterdir():
-		if file.is_file() and file.name.startswith('log'):
-			logs.append(file)
-
-	return logs
-
+	return [file for file in path.iterdir() if file.is_file() and file.name.startswith('log')]
 
 def main():
 	telegram_path = get_telegram_path()
