@@ -5,13 +5,13 @@ class Settings:
 
 class Logger:
 	def info(text : str):
-		dt = datetime.datetime.now().strftime("%B %d, %Y | %H:%M:%S")
+		dt = datetime.datetime.now().strftime("\033[90m%B %d, %Y\033[0m | \033[90m%H:%M:%S\033[0m")
 		print(f'{dt} | \033[94mINFO\033[0m | {text}')
 	def error(text : str):
 		dt = datetime.datetime.now().strftime("\033[90m%B %d, %Y\033[0m | \033[90m%H:%M:%S\033[0m")
 		print(f'{dt} | \033[91mERROR\033[0m | {text}')
 	def warn(text : str):
-		dt = datetime.datetime.now().strftime("%B %d, %Y | %H:%M:%S")
+		dt = datetime.datetime.now().strftime("\033[90m%B %d, %Y\033[0m | \033[90m%H:%M:%S\033[0m")
 		print(f'{dt} | \033[93mWARNING\033[0m | {text}')
 
 def random_name(alphabet : str, lenght : int) -> str:
